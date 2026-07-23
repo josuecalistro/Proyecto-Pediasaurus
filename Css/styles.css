@@ -1,0 +1,777 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background-image: url("../img/fondo.webp");
+
+    background-size: cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    color:white;
+
+    font-family:Arial, sans-serif;
+
+}
+
+
+/* HEADER */
+
+
+header{
+
+    background:#002415;
+    padding:30px;
+    text-align:center;
+
+}
+
+
+header h1{
+
+    font-size:3rem;
+    color:#eaf2eb;
+
+}
+
+
+header p{
+
+    margin-top:10px;
+}
+
+
+
+/* MENU */
+
+
+nav{
+
+    margin-top:25px;
+
+}
+
+
+nav ul{
+
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:10px 15px;
+    border-radius:8px;
+
+}
+
+
+nav a:hover{
+
+    background:#002715;
+
+}
+
+
+
+/* CONTENIDO */
+
+
+main{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+
+}
+
+
+section{
+
+    margin-bottom:40px;
+
+}
+
+
+h2{
+
+    color:#002d14;
+    margin-bottom:20px;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+    text-align:center;
+    padding:60px 20px;
+
+}
+
+
+.hero h2{
+
+    font-size:2.5rem;
+
+}
+
+
+
+/* CARDS */
+
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#222;
+    padding:25px;
+    border-radius:15px;
+
+    border:1px solid #40916c;
+
+    transition:0.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.card h3{
+
+    color:#d8f3dc;
+    margin-bottom:15px;
+
+}
+
+
+
+/* FORMULARIO */
+
+
+form{
+
+    max-width:500px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+
+
+input,
+textarea,
+select{
+
+    padding:12px;
+
+    border-radius:8px;
+
+    border:none;
+
+}
+
+
+
+button{
+
+    padding:12px;
+
+    background:#40916c;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#52b788;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    background:#1b4332;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:600px){
+
+
+header h1{
+
+font-size:2rem;
+
+}
+
+
+nav ul{
+
+flex-direction:column;
+
+}
+
+
+}
+/* ============================= */
+/* SECCIÓN DE DINOSAURIOS */
+/* ============================= */
+
+.seccion-dinosaurios {
+    padding: 50px 20px;
+}
+
+.seccion-dinosaurios h2 {
+    margin-bottom: 35px;
+    color: #ffffff;
+    font-size: 2.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.contenedor-cards {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+    justify-content: center;
+    gap: 35px;
+}
+
+
+/* ============================= */
+/* CARTA PRINCIPAL */
+/* ============================= */
+
+.dino-card {
+    position: relative;
+
+    min-height: 540px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    color: #1c1c1c;
+    background:
+        linear-gradient(
+            145deg,
+            #5d1111,
+            #e55b62 45%,
+            #7e151b
+        );
+
+    border: 4px solid #151515;
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.55),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.dino-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 18px 30px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(239, 82, 89, 0.45);
+}
+
+
+/* ============================= */
+/* ENCABEZADO DE LA CARTA */
+/* ============================= */
+
+.dino-card__titulo {
+    min-height: 45px;
+    padding: 6px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    background: linear-gradient(
+        to bottom,
+        #f17a80,
+        #d94b52
+    );
+
+    border: 3px solid #202020;
+    border-radius: 10px 10px 4px 4px;
+}
+
+.dino-card__titulo h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.dino-card__nivel {
+    flex-shrink: 0;
+
+    min-width: 38px;
+    height: 30px;
+    padding: 3px 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+
+    background-color: #ef777c;
+    border: 2px solid #202020;
+    border-radius: 50px;
+}
+
+
+/* ============================= */
+/* IMAGEN */
+/* ============================= */
+
+.dino-card__imagen {
+    height: 260px;
+    margin: 6px 3px 0;
+
+    background-color: #111;
+    border: 4px solid #202020;
+
+    overflow: hidden;
+}
+
+.dino-card__imagen img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.dino-card:hover .dino-card__imagen img {
+    transform: scale(1.08);
+}
+
+
+/* ============================= */
+/* TIPO DEL DINOSAURIO */
+/* ============================= */
+
+.dino-card__tipo {
+    min-height: 36px;
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        to bottom,
+        #f17a80,
+        #d94b52
+    );
+
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
+    border-left: 3px solid #202020;
+}
+
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+
+.dino-card__contenido {
+    flex-grow: 1;
+
+    margin: 0 3px;
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.88),
+            rgba(226, 217, 202, 0.95)
+        );
+
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
+    border-left: 3px solid #202020;
+}
+
+.dino-card__contenido h4 {
+    margin: 0 0 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+}
+
+.dino-card__contenido p {
+    margin-bottom: 12px;
+
+    font-size: 0.98rem;
+    line-height: 1.4;
+}
+
+.dino-card__frase {
+    padding-top: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.88rem !important;
+    font-style: italic;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+
+/* ============================= */
+/* PIE DE LA CARTA */
+/* ============================= */
+
+.dino-card__pie {
+    min-height: 46px;
+    padding: 7px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #d8c7ac;
+
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
+    border-left: 3px solid #202020;
+    border-radius: 0 0 8px 8px;
+}
+
+.dino-card__autor {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.dino-card__estadistica {
+    min-width: 55px;
+    padding: 3px 8px;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        #ef7a80,
+        #d94b52
+    );
+
+    border: 2px solid #202020;
+    border-radius: 12px 4px 12px 4px;
+}
+
+
+/* ============================= */
+/* VARIANTES SEGÚN EL TIPO */
+/* ============================= */
+
+.dino-card--herbivoro {
+    background:
+        linear-gradient(
+            145deg,
+            #234a24,
+            #66a654 45%,
+            #183719
+        );
+}
+
+.dino-card--herbivoro .dino-card__titulo,
+.dino-card--herbivoro .dino-card__tipo,
+.dino-card--herbivoro .dino-card__estadistica {
+    background:
+        linear-gradient(
+            to bottom,
+            #9bc879,
+            #559347
+        );
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 500px) {
+
+    .contenedor-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dino-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .dino-card__imagen {
+        height: 230px;
+    }
+
+    .dino-card__titulo h3 {
+        font-size: 1.05rem;
+    }
+}
+/* Piscívoros */
+
+.dino-card--piscivoro {
+    background: linear-gradient(
+        145deg,
+        #123c4b,
+        #3794ad 45%,
+        #092732
+    );
+}
+
+.dino-card--piscivoro .dino-card__titulo,
+.dino-card--piscivoro .dino-card__tipo,
+.dino-card--piscivoro .dino-card__estadistica {
+    background: linear-gradient(
+        to bottom,
+        #75cde0,
+        #3190a8
+    );
+}
+
+
+/* Insectívoros */
+
+.dino-card--insectivoro {
+    background: linear-gradient(
+        145deg,
+        #624819,
+        #b9913d 45%,
+        #39280d
+    );
+}
+
+.dino-card--insectivoro .dino-card__titulo,
+.dino-card--insectivoro .dino-card__tipo,
+.dino-card--insectivoro .dino-card__estadistica {
+    background: linear-gradient(
+        to bottom,
+        #e3c16d,
+        #a57b2e
+    );
+}
+
+
+/* Omnívoros */
+
+.dino-card--omnivoro {
+    background: linear-gradient(
+        145deg,
+        #6b5612,
+        #d5ae32 45%,
+        #3f3108
+    );
+}
+
+.dino-card--omnivoro .dino-card__titulo,
+.dino-card--omnivoro .dino-card__tipo,
+.dino-card--omnivoro .dino-card__estadistica {
+    background: linear-gradient(
+        to bottom,
+        #f2d66a,
+        #c29b24
+    );
+}
+
+
+/* Voladores */
+
+.dino-card--volador {
+    background: linear-gradient(
+        145deg,
+        #39215c,
+        #875db8 45%,
+        #24133d
+    );
+}
+
+.dino-card--volador .dino-card__titulo,
+.dino-card--volador .dino-card__tipo,
+.dino-card--volador .dino-card__estadistica {
+    background: linear-gradient(
+        to bottom,
+        #b899dd,
+        #7950a6
+    );
+}
+
+
+/* Insectos voladores */
+
+.dino-card--insecto {
+    background: linear-gradient(
+        145deg,
+        #294612,
+        #7caa39 45%,
+        #172908
+    );
+}
+
+.dino-card--insecto .dino-card__titulo,
+.dino-card--insecto .dino-card__tipo,
+.dino-card--insecto .dino-card__estadistica {
+    background: linear-gradient(
+        to bottom,
+        #b2d971,
+        #6d9c31
+    );
+}
+
+
+/* Bosses */
+
+.dino-card--boss {
+    background: linear-gradient(
+        145deg,
+        #541047,
+        #bd3e91 45%,
+        #310728
+    );
+}
+
+.dino-card--boss .dino-card__titulo,
+.dino-card--boss .dino-card__tipo,
+.dino-card--boss .dino-card__estadistica {
+    color: #ffffff;
+    background: linear-gradient(
+        to bottom,
+        #dc70bc,
+        #9b2876
+    );
+}
+
+
+/* Titanes */
+
+.dino-card--titan {
+    background: linear-gradient(
+        145deg,
+        #1a3b4d,
+        #397c8e 45%,
+        #0c222d
+    );
+}
+
+.dino-card--titan .dino-card__titulo,
+.dino-card--titan .dino-card__tipo,
+.dino-card--titan .dino-card__estadistica {
+    color: #ffffff;
+    background: linear-gradient(
+        to bottom,
+        #6caeb9,
+        #286779
+    );
+}
+
+
+/* Guardianes de Genesis */
+
+.dino-card--guardian {
+    background: linear-gradient(
+        145deg,
+        #142b4d,
+        #346db3 45%,
+        #09172b
+    );
+}
+
+.dino-card--guardian .dino-card__titulo,
+.dino-card--guardian .dino-card__tipo,
+.dino-card--guardian .dino-card__estadistica {
+    color: #ffffff;
+    background: linear-gradient(
+        to bottom,
+        #5d9ce3,
+        #265b9e
+    );
+}
