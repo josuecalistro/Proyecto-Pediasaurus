@@ -3,73 +3,449 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<title>Tienda ARKpedia</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta name="description"
-content="Tienda de accesorios, ropa y artículos inspirados en ARK Survival Evolved.">
+    <title>Tienda ARKpedia</title>
 
-<link rel="stylesheet" href="Css/styles.css">
+    <meta
+        name="description"
+        content="Tienda de accesorios, ropa y artículos inspirados en ARK Survival Evolved."
+    >
+
+    <link rel="stylesheet" href="Css/styles.css">
 
 </head>
 
-
 <body>
 
+    <header>
 
-<header>
+        <h1>Tienda ARK</h1>
 
-<h1>Tienda ARK</h1>
+        <nav>
 
-<nav>
-<a href="index.html">Inicio</a>
-<a href="dinos.html">Dinos</a>
-<a href="mapas.html">Mapas</a>
-<a href="tienda.html">Tienda</a>
-<a href="foro.html">Foro</a>
-<a href="registro.html">Registro</a>
-</nav>
+            <a href="index.html">Inicio</a>
+            <a href="dinos.html">Dinos</a>
+            <a href="mapas.html">Mapas</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="foro.html">Foro</a>
+            <a href="registro.html">Registro</a>
 
+        </nav>
 
-</header>
-
-
-
-<main>
+    </header>
 
 
-<section class="grid">
+    <main class="tienda-main">
+
+        <section class="tienda-presentacion">
+
+            <h2>Tienda oficial ARKpedia</h2>
+
+            <p>
+                Descubrí productos inspirados en ARK: Survival Evolved.
+                Agregá tus artículos favoritos al carrito.
+            </p>
+
+        </section>
 
 
-<article class="card">
+        <div class="tienda-layout">
 
-<h2>Remera ARK</h2>
+            <section class="productos-seccion">
 
-<p>Indumentaria temática del juego.</p>
+                <div class="productos-encabezado">
 
-</article>
+                    <h2>Productos disponibles</h2>
 
+                    <p>
+                        Elegí tus productos y agregalos al carrito.
+                    </p>
 
-<article class="card">
-
-<h2>Accesorios Gamer</h2>
-
-<p>Productos para fanáticos de ARK.</p>
-
-</article>
+                </div>
 
 
-</section>
+                <div class="productos-grid">
+
+                    <!-- PRODUCTO 1 -->
+
+                    <article
+                        class="producto-card"
+                        data-id="1"
+                        data-nombre="Producto 1"
+                        data-precio="15000"
+                    >
+
+                        <div class="producto-card__imagen">
+
+                            <img
+                                src="img/producto-1.webp"
+                                alt="Producto 1 de la tienda ARK"
+                            >
+
+                        </div>
+
+                        <div class="producto-card__contenido">
+
+                            <span class="producto-card__categoria">
+                                Categoría
+                            </span>
+
+                            <h3>Producto 1</h3>
+
+                            <p>
+                                Descripción breve del producto.
+                            </p>
+
+                            <strong class="producto-card__precio">
+                                $15.000
+                            </strong>
+
+                            <button
+                                class="producto-card__boton"
+                                type="button"
+                            >
+                                Agregar al carrito
+                            </button>
+
+                        </div>
+
+                    </article>
 
 
-</main>
+                    <!-- PRODUCTO 2 -->
+
+                    <article
+                        class="producto-card"
+                        data-id="2"
+                        data-nombre="Producto 2"
+                        data-precio="18000"
+                    >
+
+                        <div class="producto-card__imagen">
+
+                            <img
+                                src="img/producto-2.webp"
+                                alt="Producto 2 de la tienda ARK"
+                            >
+
+                        </div>
+
+                        <div class="producto-card__contenido">
+
+                            <span class="producto-card__categoria">
+                                Categoría
+                            </span>
+
+                            <h3>Producto 2</h3>
+
+                            <p>
+                                Descripción breve del producto.
+                            </p>
+
+                            <strong class="producto-card__precio">
+                                $18.000
+                            </strong>
+
+                            <button
+                                class="producto-card__boton"
+                                type="button"
+                            >
+                                Agregar al carrito
+                            </button>
+
+                        </div>
+
+                    </article>
 
 
-<footer>
-<p>ARKpedia</p>
-</footer>
+                    <!-- PRODUCTO 3 -->
 
+                    <article
+                        class="producto-card"
+                        data-id="3"
+                        data-nombre="Producto 3"
+                        data-precio="12000"
+                    >
+
+                        <div class="producto-card__imagen">
+
+                            <img
+                                src="img/producto-3.webp"
+                                alt="Producto 3 de la tienda ARK"
+                            >
+
+                        </div>
+
+                        <div class="producto-card__contenido">
+
+                            <span class="producto-card__categoria">
+                                Categoría
+                            </span>
+
+                            <h3>Producto 3</h3>
+
+                            <p>
+                                Descripción breve del producto.
+                            </p>
+
+                            <strong class="producto-card__precio">
+                                $12.000
+                            </strong>
+
+                            <button
+                                class="producto-card__boton"
+                                type="button"
+                            >
+                                Agregar al carrito
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 4 -->
+
+                    <article
+                        class="producto-card"
+                        data-id="4"
+                        data-nombre="Producto 4"
+                        data-precio="22000"
+                    >
+
+                        <div class="producto-card__imagen">
+
+                            <img
+                                src="img/producto-4.webp"
+                                alt="Producto 4 de la tienda ARK"
+                            >
+
+                        </div>
+
+                        <div class="producto-card__contenido">
+
+                            <span class="producto-card__categoria">
+                                Categoría
+                            </span>
+
+                            <h3>Producto 4</h3>
+
+                            <p>
+                                Descripción breve del producto.
+                            </p>
+
+                            <strong class="producto-card__precio">
+                                $22.000
+                            </strong>
+
+                            <button
+                                class="producto-card__boton"
+                                type="button"
+                            >
+                                Agregar al carrito
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 5 -->
+
+                    <article
+                        class="producto-card"
+                        data-id="5"
+                        data-nombre="Producto 5"
+                        data-precio="10000"
+                    >
+
+                        <div class="producto-card__imagen">
+
+                            <img
+                                src="img/producto-5.webp"
+                                alt="Producto 5 de la tienda ARK"
+                            >
+
+                        </div>
+
+                        <div class="producto-card__contenido">
+
+                            <span class="producto-card__categoria">
+                                Categoría
+                            </span>
+
+                            <h3>Producto 5</h3>
+
+                            <p>
+                                Descripción breve del producto.
+                            </p>
+
+                            <strong class="producto-card__precio">
+                                $10.000
+                            </strong>
+
+                            <button
+                                class="producto-card__boton"
+                                type="button"
+                            >
+                                Agregar al carrito
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 6 -->
+
+                    <article
+                        class="producto-card"
+                        data-id="6"
+                        data-nombre="Producto 6"
+                        data-precio="25000"
+                    >
+
+                        <div class="producto-card__imagen">
+
+                            <img
+                                src="img/producto-6.webp"
+                                alt="Producto 6 de la tienda ARK"
+                            >
+
+                        </div>
+
+                        <div class="producto-card__contenido">
+
+                            <span class="producto-card__categoria">
+                                Categoría
+                            </span>
+
+                            <h3>Producto 6</h3>
+
+                            <p>
+                                Descripción breve del producto.
+                            </p>
+
+                            <strong class="producto-card__precio">
+                                $25.000
+                            </strong>
+
+                            <button
+                                class="producto-card__boton"
+                                type="button"
+                            >
+                                Agregar al carrito
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <aside class="carrito">
+
+                <div class="carrito__encabezado">
+
+                    <div>
+
+                        <span class="carrito__etiqueta">
+                            Tu compra
+                        </span>
+
+                        <h2>Carrito</h2>
+
+                    </div>
+
+                    <span
+                        class="carrito__contador"
+                        id="contador-carrito"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="carrito__productos"
+                    id="carrito-productos"
+                >
+
+                    <p class="carrito__vacio">
+                        El carrito está vacío.
+                    </p>
+
+                </div>
+
+
+                <div class="carrito__resumen">
+
+                    <div class="carrito__fila">
+
+                        <span>Productos</span>
+
+                        <span id="cantidad-productos">
+                            0
+                        </span>
+
+                    </div>
+
+                    <div class="carrito__fila carrito__fila--total">
+
+                        <span>Total</span>
+
+                        <strong id="carrito-total">
+                            $0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="carrito__comprar"
+                    id="finalizar-compra"
+                    type="button"
+                >
+                    Finalizar compra
+                </button>
+
+                <button
+                    class="carrito__vaciar"
+                    id="vaciar-carrito"
+                    type="button"
+                >
+                    Vaciar carrito
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>ARKpedia</p>
+
+    </footer>
+
+
+    <!-- CONEXIÓN CON JAVASCRIPT -->
+
+    <script src="js/tienda.js"></script>
 
 </body>
 

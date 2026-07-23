@@ -2,94 +2,926 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ARKpedia | Enciclopedia de Dinosaurios ARK Survival Evolved</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-    content="ARKpedia es una enciclopedia dedicada a los dinosaurios, mapas y contenido del videojuego ARK Survival Evolved.">
+    <title>
+        ARKpedia | Enciclopedia de Dinosaurios ARK Survival Evolved
+    </title>
+
+    <meta
+        name="description"
+        content="ARKpedia es una enciclopedia dedicada a los dinosaurios, mapas y contenido del videojuego ARK Survival Evolved."
+    >
 
     <link rel="stylesheet" href="Css/styles.css">
-</head>
 
+</head>
 
 <body>
 
 <header>
+
     <h1>ARKpedia</h1>
-    <p>La enciclopedia definitiva de ARK Survival Evolved</p>
+
+    <p>
+        La enciclopedia definitiva de ARK Survival Evolved
+    </p>
 
     <nav>
+
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="dinos.html">Dinosaurios</a></li>
-            <li><a href="mapas.html">Mapas</a></li>
-            <li><a href="tienda.html">Tienda</a></li>
-            <li><a href="foro.html">Foro</a></li>
-            <li><a href="registro.html">Registro</a></li>
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="dinos.html">Dinosaurios</a>
+            </li>
+
+            <li>
+                <a href="mapas.html">Mapas</a>
+            </li>
+
+            <li>
+                <a href="tienda.html">Tienda</a>
+            </li>
+
+            <li>
+                <a href="foro.html">Foro</a>
+            </li>
+
+            <li>
+                <a href="registro.html">Registro</a>
+            </li>
+
         </ul>
+
     </nav>
 
 </header>
 
 
-<main>
+<main class="inicio-main">
 
-<section class="hero">
+    <!-- HERO -->
 
-<h2>Bienvenido a ARKpedia</h2>
+    <section class="hero">
 
-<p>
-Explora información sobre criaturas prehistóricas,
-mapas, objetos y comunidades del universo ARK.
-</p>
+        <div class="hero__contenido">
 
-</section>
+            <span class="hero__etiqueta">
+                Enciclopedia de ARK
+            </span>
+
+            <h2>
+                Bienvenido a ARKpedia
+            </h2>
+
+            <p>
+                Explorá criaturas prehistóricas, mapas,
+                objetos y contenido del universo de
+                ARK: Survival Evolved.
+            </p>
+
+            <div class="hero__botones">
+
+                <a
+                    class="hero__boton hero__boton--principal"
+                    href="dinos.html"
+                >
+                    Explorar dinosaurios
+                </a>
+
+                <a
+                    class="hero__boton"
+                    href="mapas.html"
+                >
+                    Ver mapas
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-<section>
+    <!-- CARRUSEL DE DINOSAURIOS -->
 
-<h2>Contenido destacado</h2>
+    <section class="carrusel-seccion">
+
+        <div class="carrusel-encabezado">
+
+            <div>
+
+                <span class="carrusel-etiqueta">
+                    Criaturas
+                </span>
+
+                <h2>
+                    Dinosaurios destacados
+                </h2>
+
+                <p>
+                    Conocé algunas de las criaturas más
+                    poderosas y útiles de ARK.
+                </p>
+
+            </div>
+
+            <a
+                class="carrusel-ver-todos"
+                href="dinos.html"
+            >
+                Ver todos
+            </a>
+
+        </div>
 
 
-<article class="card">
+        <div class="carrusel-contenedor">
 
-<h3>Domina criaturas legendarias</h3>
-
-<p>
-Aprende características, habilidades y estrategias
-para domesticar dinosaurios.
-</p>
-
-</article>
-
-
-<article class="card">
-
-<h3>Explora nuevos mundos</h3>
-
-<p>
-Descubre mapas llenos de secretos y peligros.
-</p>
-
-</article>
+            <button
+                class="carrusel-boton carrusel-boton--anterior"
+                type="button"
+                data-carrusel-anterior="carrusel-dinos"
+                aria-label="Ver dinosaurios anteriores"
+            >
+                &#10094;
+            </button>
 
 
-</section>
+            <div
+                class="carrusel"
+                id="carrusel-dinos"
+            >
 
+                <!-- DINO 1 -->
+
+                <article class="inicio-card">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/rex.webp"
+                            alt="Tyrannosaurus Rex de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Carnívoro
+                        </span>
+
+                        <h3>
+                            Tyrannosaurus Rex
+                        </h3>
+
+                        <p>
+                            Una de las criaturas más poderosas
+                            para combates y enfrentamientos
+                            contra jefes.
+                        </p>
+
+                        <a href="dinos.html">
+                            Ver criatura
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DINO 2 -->
+
+                <article class="inicio-card">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/argentavis.webp"
+                            alt="Argentavis de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Volador
+                        </span>
+
+                        <h3>
+                            Argentavis
+                        </h3>
+
+                        <p>
+                            Excelente criatura voladora para
+                            transportar recursos y explorar
+                            grandes distancias.
+                        </p>
+
+                        <a href="dinos.html">
+                            Ver criatura
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DINO 3 -->
+
+                <article class="inicio-card">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/ankylosaurus.webp"
+                            alt="Ankylosaurus de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Herbívoro
+                        </span>
+
+                        <h3>
+                            Ankylosaurus
+                        </h3>
+
+                        <p>
+                            Especialista en la recolección de
+                            metal, cristal y otros recursos
+                            minerales.
+                        </p>
+
+                        <a href="dinos.html">
+                            Ver criatura
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DINO 4 -->
+
+                <article class="inicio-card">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/spinosaurus.webp"
+                            alt="Spinosaurus de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Carnívoro
+                        </span>
+
+                        <h3>
+                            Spinosaurus
+                        </h3>
+
+                        <p>
+                            Un depredador rápido y poderoso,
+                            especialmente efectivo cerca del
+                            agua.
+                        </p>
+
+                        <a href="dinos.html">
+                            Ver criatura
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DINO 5 -->
+
+                <article class="inicio-card">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/therizinosaurus.webp"
+                            alt="Therizinosaurus de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Herbívoro
+                        </span>
+
+                        <h3>
+                            Therizinosaurus
+                        </h3>
+
+                        <p>
+                            Criatura versátil para recolectar
+                            recursos y participar en combates.
+                        </p>
+
+                        <a href="dinos.html">
+                            Ver criatura
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <button
+                class="carrusel-boton carrusel-boton--siguiente"
+                type="button"
+                data-carrusel-siguiente="carrusel-dinos"
+                aria-label="Ver más dinosaurios"
+            >
+                &#10095;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARRUSEL DE MAPAS -->
+
+    <section class="carrusel-seccion">
+
+        <div class="carrusel-encabezado">
+
+            <div>
+
+                <span class="carrusel-etiqueta">
+                    Exploración
+                </span>
+
+                <h2>
+                    Mapas destacados
+                </h2>
+
+                <p>
+                    Descubrí diferentes mundos, biomas,
+                    peligros y secretos.
+                </p>
+
+            </div>
+
+            <a
+                class="carrusel-ver-todos"
+                href="mapas.html"
+            >
+                Ver todos
+            </a>
+
+        </div>
+
+
+        <div class="carrusel-contenedor">
+
+            <button
+                class="carrusel-boton carrusel-boton--anterior"
+                type="button"
+                data-carrusel-anterior="carrusel-mapas"
+                aria-label="Ver mapas anteriores"
+            >
+                &#10094;
+            </button>
+
+
+            <div
+                class="carrusel"
+                id="carrusel-mapas"
+            >
+
+                <!-- MAPA 1 -->
+
+                <article class="inicio-card inicio-card--mapa">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/mapas/the-island.webp"
+                            alt="Mapa The Island de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Mapa de historia
+                        </span>
+
+                        <h3>
+                            The Island
+                        </h3>
+
+                        <p>
+                            El mapa original de ARK, con
+                            playas, selvas, montañas, nieve
+                            y peligrosas cuevas.
+                        </p>
+
+                        <a href="mapas.html">
+                            Ver mapa
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MAPA 2 -->
+
+                <article class="inicio-card inicio-card--mapa">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/mapas/ragnarok.webp"
+                            alt="Mapa Ragnarok de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Mapa gratuito
+                        </span>
+
+                        <h3>
+                            Ragnarok
+                        </h3>
+
+                        <p>
+                            Un enorme territorio con desiertos,
+                            volcanes, castillos y criaturas
+                            especiales.
+                        </p>
+
+                        <a href="mapas.html">
+                            Ver mapa
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MAPA 3 -->
+
+                <article class="inicio-card inicio-card--mapa">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/mapas/aberration.webp"
+                            alt="Mapa Aberration de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Mapa de historia
+                        </span>
+
+                        <h3>
+                            Aberration
+                        </h3>
+
+                        <p>
+                            Un mundo subterráneo con zonas
+                            radiactivas, criaturas mutadas y
+                            exploración vertical.
+                        </p>
+
+                        <a href="mapas.html">
+                            Ver mapa
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MAPA 4 -->
+
+                <article class="inicio-card inicio-card--mapa">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/mapas/extinction.webp"
+                            alt="Mapa Extinction de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Mapa de historia
+                        </span>
+
+                        <h3>
+                            Extinction
+                        </h3>
+
+                        <p>
+                            Una Tierra destruida dominada por
+                            criaturas corruptas y enormes
+                            Titanes.
+                        </p>
+
+                        <a href="mapas.html">
+                            Ver mapa
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MAPA 5 -->
+
+                <article class="inicio-card inicio-card--mapa">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/mapas/fjordur.webp"
+                            alt="Mapa Fjordur de ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Mapa gratuito
+                        </span>
+
+                        <h3>
+                            Fjordur
+                        </h3>
+
+                        <p>
+                            Un mundo inspirado en la mitología
+                            nórdica con diferentes reinos,
+                            cuevas y jefes.
+                        </p>
+
+                        <a href="mapas.html">
+                            Ver mapa
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <button
+                class="carrusel-boton carrusel-boton--siguiente"
+                type="button"
+                data-carrusel-siguiente="carrusel-mapas"
+                aria-label="Ver más mapas"
+            >
+                &#10095;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARRUSEL DE TIENDA -->
+
+    <section class="carrusel-seccion">
+
+        <div class="carrusel-encabezado">
+
+            <div>
+
+                <span class="carrusel-etiqueta">
+                    Tienda
+                </span>
+
+                <h2>
+                    Productos destacados
+                </h2>
+
+                <p>
+                    Encontrá accesorios y artículos
+                    inspirados en ARK.
+                </p>
+
+            </div>
+
+            <a
+                class="carrusel-ver-todos"
+                href="tienda.html"
+            >
+                Ver tienda
+            </a>
+
+        </div>
+
+
+        <div class="carrusel-contenedor">
+
+            <button
+                class="carrusel-boton carrusel-boton--anterior"
+                type="button"
+                data-carrusel-anterior="carrusel-productos"
+                aria-label="Ver productos anteriores"
+            >
+                &#10094;
+            </button>
+
+
+            <div
+                class="carrusel"
+                id="carrusel-productos"
+            >
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="inicio-card inicio-card--producto">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/producto-1.webp"
+                            alt="Producto 1 de la tienda ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Producto
+                        </span>
+
+                        <h3>
+                            Producto 1
+                        </h3>
+
+                        <p>
+                            Descripción breve del producto
+                            disponible en la tienda.
+                        </p>
+
+                        <strong class="inicio-card__precio">
+                            $15.000
+                        </strong>
+
+                        <a href="tienda.html">
+                            Ver producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="inicio-card inicio-card--producto">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/producto-2.webp"
+                            alt="Producto 2 de la tienda ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Producto
+                        </span>
+
+                        <h3>
+                            Producto 2
+                        </h3>
+
+                        <p>
+                            Descripción breve del producto
+                            disponible en la tienda.
+                        </p>
+
+                        <strong class="inicio-card__precio">
+                            $18.000
+                        </strong>
+
+                        <a href="tienda.html">
+                            Ver producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="inicio-card inicio-card--producto">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/producto-3.webp"
+                            alt="Producto 3 de la tienda ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Producto
+                        </span>
+
+                        <h3>
+                            Producto 3
+                        </h3>
+
+                        <p>
+                            Descripción breve del producto
+                            disponible en la tienda.
+                        </p>
+
+                        <strong class="inicio-card__precio">
+                            $12.000
+                        </strong>
+
+                        <a href="tienda.html">
+                            Ver producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="inicio-card inicio-card--producto">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/producto-4.webp"
+                            alt="Producto 4 de la tienda ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Producto
+                        </span>
+
+                        <h3>
+                            Producto 4
+                        </h3>
+
+                        <p>
+                            Descripción breve del producto
+                            disponible en la tienda.
+                        </p>
+
+                        <strong class="inicio-card__precio">
+                            $22.000
+                        </strong>
+
+                        <a href="tienda.html">
+                            Ver producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 5 -->
+
+                <article class="inicio-card inicio-card--producto">
+
+                    <div class="inicio-card__imagen">
+
+                        <img
+                            src="img/producto-5.webp"
+                            alt="Producto 5 de la tienda ARK"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="inicio-card__contenido">
+
+                        <span class="inicio-card__categoria">
+                            Producto
+                        </span>
+
+                        <h3>
+                            Producto 5
+                        </h3>
+
+                        <p>
+                            Descripción breve del producto
+                            disponible en la tienda.
+                        </p>
+
+                        <strong class="inicio-card__precio">
+                            $10.000
+                        </strong>
+
+                        <a href="tienda.html">
+                            Ver producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <button
+                class="carrusel-boton carrusel-boton--siguiente"
+                type="button"
+                data-carrusel-siguiente="carrusel-productos"
+                aria-label="Ver más productos"
+            >
+                &#10095;
+            </button>
+
+        </div>
+
+    </section>
 
 </main>
 
 
 <footer>
 
-<p>
-© 2026 ARKpedia - Proyecto académico Desarrollo Web
-</p>
+    <p>
+        © 2026 ARKpedia - Proyecto académico Desarrollo Web
+    </p>
 
 </footer>
 
+
+<script src="js/index.js"></script>
 
 </body>
 
