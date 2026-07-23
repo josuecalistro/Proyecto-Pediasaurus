@@ -302,6 +302,68 @@ flex-direction:column;
     justify-content: center;
     gap: 35px;
 }
+/* ============================= */
+/* PC */
+/* ============================= */
+
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .contenedor-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ============================= */
+/* Celular */
+/* ============================= */
+
+@media (max-width: 576px) {
+
+    .contenedor-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .dino-card {
+        min-height: auto;
+    }
+
+    .dino-card__imagen {
+        height: 140px;
+    }
+
+    .dino-card__titulo h3 {
+        font-size: 0.9rem;
+    }
+
+    .dino-card__contenido h4 {
+        font-size: 0.85rem;
+    }
+
+    .dino-card__contenido p,
+    .dino-card__frase {
+        font-size: 0.72rem;
+        line-height: 1.3;
+    }
+
+    .dino-card__pie {
+        font-size: 0.7rem;
+    }
+
+}
 
 
 /* ============================= */
