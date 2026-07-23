@@ -776,3 +776,9 @@ flex-direction:column;
         #265b9e
     );
 }
+.form-registro{
+    justify-content: center;
+    align-items: center;
+    background-color: #002d1498;
+
+}
