@@ -1,23 +1,57 @@
-# 🦖 ARK Survival Evolved Wiki
+# 🦖 PediaSaurio - Wikipedia de ARK: Survival Evolved
 
-Proyecto Final de Desarrollo Web.
+## 📖 Descripción
 
-Este proyecto consiste en una página web inspirada en el videojuego **ARK: Survival Evolved**, donde los usuarios podrán consultar información sobre dinosaurios, mapas, jefes, tiendas y participar en un foro de la comunidad.
+PediaSaurio es un sitio web desarrollado como proyecto final para el curso de Desarrollo Web.
 
----
+El objetivo del proyecto es ofrecer una página inspirada en una Wikipedia sobre el videojuego **ARK: Survival Evolved**, donde los usuarios pueden consultar información sobre dinosaurios, mapas del juego, participar en un foro, registrarse y recorrer una tienda temática.
 
-# 📖 Descripción
-
-El objetivo del proyecto es desarrollar una maqueta web utilizando **HTML5 y CSS3**, aplicando buenas prácticas de estructura, semántica, accesibilidad y diseño responsive.
-
-Actualmente el proyecto se encuentra en la etapa de desarrollo de la interfaz (Front-End), sin utilizar bases de datos ni JavaScript.
+El sitio fue desarrollado utilizando HTML5, CSS3, JavaScript y Bootstrap, aplicando buenas prácticas de maquetación, accesibilidad, SEO y diseño responsive.
 
 ---
 
-# 🗂️ Estructura del proyecto
+## 🌐 Sitio publicado
+
+GitHub Pages:
+
+https://josuecalistro.github.io/Proyecto-Pediasaurus/
+
+Repositorio:
+
+https://github.com/josuecalistro/Proyecto-Pediasaurus
+
+---
+
+# 🚀 Tecnologías utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- AOS (Animate On Scroll)
+- Git
+- GitHub
+- GitHub Pages
+
+---
+
+# 📂 Estructura del proyecto
 
 ```
-Proyecto-Final/
+Proyecto-Pediasaurus
+│
+├── Css
+│   └── styles.css
+│
+├── img
+│   ├── dinos
+│   ├── mapas
+│   ├── productos
+│   └── ...
+│
+├── js
+│   ├── index.js
+│   └── tienda.js
 │
 ├── index.html
 ├── dinos.html
@@ -26,186 +60,229 @@ Proyecto-Final/
 ├── foro.html
 ├── registro.html
 │
-├── css/
-│   └── styles.css
-│
-├── img/
-│   ├── dinosaurios/
-│   ├── bosses/
-│   ├── mapas/
-│   └── fondos/
-│
 └── README.md
 ```
 
 ---
 
-# 📄 Páginas
+# 📄 Páginas desarrolladas
 
 ## 🏠 Inicio
 
-Página principal del sitio.
+La página principal presenta el sitio mediante un hero principal y tres carruseles interactivos.
 
-Contiene:
+Incluye:
 
-- Header
-- Navegación
-- Banner principal
 - Presentación del proyecto
-- Acceso rápido a las demás secciones
-- Footer
+- Carrusel de dinosaurios
+- Carrusel de mapas
+- Carrusel de productos destacados
+- Navegación hacia todas las páginas
 
 ---
 
 ## 🦖 Dinosaurios
 
-Sección principal del proyecto.
+Contiene una galería de criaturas de ARK.
 
-Incluye tarjetas personalizadas para cada criatura de ARK con:
+Cada tarjeta muestra:
 
 - Imagen
 - Nombre
 - Tipo
-- Utilidad
 - Descripción
-- Rareza
-- Diseño inspirado en cartas coleccionables
-
-También incluye:
-
-- Bosses principales
-- Titanes
-- Guardianes de Genesis
+- Utilidad
 
 ---
 
 ## 🗺️ Mapas
 
-Página destinada a mostrar todos los mapas oficiales del juego.
+Presenta los mapas oficiales del juego mediante tarjetas con efecto 3D.
 
-Ejemplos:
+Cada mapa incluye:
 
-- The Island
-- Scorched Earth
-- Aberration
-- Extinction
-- Genesis
-- Fjordur
-- Lost Island
-- Crystal Isles
-
-Cada mapa tendrá una breve descripción y sus principales características.
+- Imagen
+- Nombre
+- Breve descripción
+- Efecto Flip al pasar el mouse
 
 ---
 
 ## 🛒 Tienda
 
-Página simulando una tienda temática de ARK.
+Simula una tienda de productos relacionados con ARK.
 
-Contendrá productos como:
+Funciones implementadas:
 
-- Remeras
-- Buzos
-- Gorras
-- Mousepads
-- Posters
-- Accesorios
-
-Su objetivo es mostrar el uso de cards y organización mediante CSS.
+- Agregar productos al carrito.
+- Calcular cantidad de productos.
+- Calcular precio total.
+- Vaciar carrito.
+- Finalizar compra.
+- Alerta Bootstrap al finalizar una compra.
+- Alerta Bootstrap al vaciar el carrito.
 
 ---
 
 ## 💬 Foro
 
-Espacio donde se simula un pequeño foro de la comunidad.
+Página de ejemplo donde se muestran publicaciones simuladas de usuarios de la comunidad.
 
-Permitirá mostrar publicaciones de ejemplo con comentarios ficticios utilizando únicamente HTML y CSS.
+Su objetivo es representar una futura sección social del sitio.
 
 ---
 
 ## 👤 Registro
 
-Formulario de registro de usuario.
+Formulario para registrar un usuario.
 
 Incluye:
 
 - Nombre
-- Apellido
 - Email
-- Contraseña
-- Confirmación de contraseña
-- Checkbox de aceptación de términos
+- Validaciones HTML5
+- Componentes Bootstrap
+- Alerta Bootstrap de bienvenida al registrarse correctamente.
 
 ---
 
-# 🎨 Tecnologías utilizadas
+# 🎨 Diseño
 
-- HTML5
-- CSS3
+El diseño busca representar la estética del videojuego ARK.
+
+Se utilizaron:
+
+- Paleta de colores oscuros.
+- Detalles verdes inspirados en la interfaz del juego.
+- Tarjetas con sombras.
+- Animaciones suaves.
+- Diseño responsive.
+- Componentes Bootstrap.
 
 ---
 
-# 📐 Características implementadas
+# ✨ Funcionalidades implementadas
 
-- HTML semántico
-- Diseño responsive
+✔ Navegación entre páginas.
+
+✔ Carruseles desarrollados con JavaScript.
+
+✔ Tarjetas con efectos Hover.
+
+✔ Tarjetas 3D para mapas.
+
+✔ Carrito de compras funcional.
+
+✔ Vaciado del carrito.
+
+✔ Cálculo automático del total.
+
+✔ Alertas Bootstrap.
+
+✔ Registro de usuarios.
+
+✔ Animaciones mediante AOS.
+
+✔ Diseño responsive.
+
+---
+
+# 📱 Responsive Design
+
+El sitio fue desarrollado para adaptarse correctamente a:
+
+- Computadoras
+- Tablets
+- Teléfonos móviles
+
+Utilizando:
+
 - Flexbox
-- CSS Grid
-- Tarjetas personalizadas
-- Hover animations
-- Transiciones CSS
-- Organización modular
-- Accesibilidad básica
-- Buenas prácticas SEO
+- Grid
+- Media Queries
+- Bootstrap
 
 ---
 
-# 🦕 Dinosaurios incluidos
+# ♿ Accesibilidad
 
-Actualmente se agregaron más de **35 criaturas**, entre ellas:
+Se implementaron distintas buenas prácticas:
 
-- Rex
-- Giganotosaurus
-- Carcharodontosaurus
-- Spinosaurus
-- Therizinosaurus
-- Argentavis
-- Quetzal
-- Griffin
-- Rhyniognatha
-
-Además de:
-
-- Bosses
-- Titanes
-- Guardianes de Genesis
+- Etiquetas semánticas.
+- Uso correcto de encabezados.
+- Formularios con labels.
+- Texto alternativo (alt) en imágenes.
+- Navegación clara.
+- Contraste de colores.
 
 ---
 
-# 🎯 Objetivo
+# 🔍 SEO
 
-Crear una enciclopedia visual sobre ARK que permita a cualquier jugador consultar rápidamente información de criaturas y mapas mediante una interfaz moderna e intuitiva.
+Se aplicaron prácticas básicas de SEO On Page:
+
+- Títulos únicos por página.
+- Meta Description.
+- Uso de etiquetas semánticas.
+- Imágenes con atributo alt.
+- Estructura correcta de encabezados.
+- Optimización de contenido.
 
 ---
 
-# 🚧 Estado del proyecto
+# 📚 Librerías utilizadas
 
-🟡 En desarrollo
+## Bootstrap 5
 
-Actualmente se encuentra desarrollada la estructura HTML y gran parte del diseño CSS.
+Se utilizó para:
 
-Próximamente se incorporarán:
+- Botones
+- Formularios
+- Alertas
+- Contenedores
+- Utilidades responsive
 
-- Más imágenes
-- Diseño completo de mapas
-- Tienda
-- Foro
-- Registro
-- Mejoras responsive
-- Optimización SEO
+---
+
+## AOS
+
+Animate On Scroll.
+
+Permite agregar animaciones cuando los elementos aparecen durante el desplazamiento de la página.
+
+---
+
+# 🧠 Lo aprendido durante el proyecto
+
+Durante el desarrollo se aplicaron conocimientos sobre:
+
+- HTML semántico.
+- CSS avanzado.
+- Flexbox.
+- CSS Grid.
+- Responsive Design.
+- Bootstrap.
+- JavaScript.
+- Manipulación del DOM.
+- Eventos.
+- Git.
+- GitHub.
+- GitHub Pages.
+- SEO.
+- Accesibilidad.
 
 ---
 
 # 👨‍💻 Autor
 
-Proyecto desarrollado por **Josue Calistro** para el curso de **Desarrollo Web**.
+**Josué Calistro**
+
+Proyecto realizado para la entrega final del curso **Desarrollo Web**.
+
+---
+
+# 📌 Estado del proyecto
+
+✅ Proyecto finalizado.
+
+Actualmente incluye todas las funcionalidades requeridas para la entrega académica y se encuentra publicado mediante GitHub Pages.
