@@ -223,3 +223,8 @@ Proyecto desarrollado por **Josué Calistro** como entrega final del curso de **
 # 📜 Licencia
 
 Proyecto realizado con fines educativos.
+
+ENLACE NETLIFY: https://proyecto-pediasaurus.netlify.app/
+ENLACE REPOSITORIO GITHUB:https://github.com/josuecalistro/Proyecto-Pediasaurus
+ENLACE PAGINA GITHUB: https://josuecalistro.github.io/Proyecto-Pediasaurus/
+
