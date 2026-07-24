@@ -227,4 +227,5 @@ Proyecto realizado con fines educativos.
 ENLACE NETLIFY: https://proyecto-pediasaurus.netlify.app/
 ENLACE REPOSITORIO GITHUB:https://github.com/josuecalistro/Proyecto-Pediasaurus
 ENLACE PAGINA GITHUB: https://josuecalistro.github.io/Proyecto-Pediasaurus/
+ENLACE DOC GOOGLE (captura del proyecto): https://docs.google.com/document/d/1eV3Of4E6Vgb9hYzkqIw9UR0rjl64-SQmzU-uhH2adBc/edit?usp=sharing
 
