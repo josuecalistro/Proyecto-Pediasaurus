@@ -1475,7 +1475,26 @@ flex-direction:column;
 .carrito__vaciar:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
-
+#alerta-compra {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    width: min(500px, 90%);
+    z-index: 9999;
+    text-align: center;
+    transform: translateX(-50%);
+}
+#alerta-compra,
+#alerta-vaciado{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    max-width: 90%;
+    z-index: 9999;
+    text-align: center;
+}
 
 /* ================================= */
 /* RESPONSIVE */

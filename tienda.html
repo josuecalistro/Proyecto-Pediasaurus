@@ -15,9 +15,17 @@
     <meta
         name="description"
         content="Tienda de accesorios, ropa y artículos inspirados en ARK Survival Evolved."
+        
     >
+     <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+>
 
     <link rel="stylesheet" href="Css/styles.css">
+    <link
+href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
 
 </head>
 
@@ -39,8 +47,34 @@
         </nav>
 
     </header>
+    <div
+    id="alerta-compra"
+    class="alert alert-success fade d-none"
+    role="alert"
+>
+    <strong>¡Compra realizada!</strong>
+    Tu pedido fue procesado correctamente.
+</div>
+<div
+    id="alerta-vaciado"
+    class="alert alert-warning fade d-none"
+    role="alert"
+>
+    <strong>¡Carrito vaciado!</strong>
+    Se eliminaron todos los productos del carrito.
+</div>
 
+    <strong>¡Compra realizada!</strong>
+    Tu pedido fue procesado correctamente.
 
+    <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Cerrar">
+    </button>
+
+</div>
     <main class="tienda-main">
 
         <section class="tienda-presentacion">
@@ -350,8 +384,6 @@
                 </div>
 
             </section>
-
-
             <aside class="carrito">
 
                 <div class="carrito__encabezado">
@@ -442,8 +474,20 @@
 
 </footer>
     <!-- CONEXIÓN CON JAVASCRIPT -->
+     <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
 
     <script src="js/tienda.js"></script>
+    <script
+src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+</script>
+
+<script>
+
+AOS.init();
+
+</script>
 
 </body>
 

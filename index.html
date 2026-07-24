@@ -18,8 +18,15 @@
         name="description"
         content="PediaSaurio es una enciclopedia dedicada a los dinosaurios, mapas y contenido del videojuego ARK Survival Evolved."
     >
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+>
 
     <link rel="stylesheet" href="Css/styles.css">
+    <link
+href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
 
 </head>
 
@@ -115,7 +122,8 @@
 
     <!-- CARRUSEL DE DINOSAURIOS -->
 
-    <section class="carrusel-seccion">
+    <section class="carrusel-seccion" data-aos="fade-up">
+
 
         <div class="carrusel-encabezado">
 
@@ -375,7 +383,7 @@
 
     <!-- CARRUSEL DE MAPAS -->
 
-    <section class="carrusel-seccion">
+    <section class="carrusel-seccion" data-aos="fade-up">
 
         <div class="carrusel-encabezado">
 
@@ -636,7 +644,7 @@
 
     <!-- CARRUSEL DE TIENDA -->
 
-    <section class="carrusel-seccion">
+    <section class="carrusel-seccion" data-aos="fade-up">
 
         <div class="carrusel-encabezado">
 
@@ -917,7 +925,18 @@
     </p>
 
 </footer>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+</script>
 
+<script>
+
+AOS.init();
+
+</script>
 
 <script src="js/index.js"></script>
 
