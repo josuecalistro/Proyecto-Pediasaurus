@@ -838,6 +838,42 @@ flex-direction:column;
         #265b9e
     );
 }
+/* Botón Ver más */
+
+.ver-mas-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.boton-ver-mas {
+    padding: 12px 30px;
+    border: 2px solid #9aca3c;
+    border-radius: 8px;
+    background-color: #315c28;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+    background-color: #4d7c32;
+    transform: translateY(-3px);
+}
+
+.boton-ver-mas:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.boton-ver-mas--oculto {
+    display: none;
+}
 .form-registro{
     justify-content: center;
     align-items: center;
