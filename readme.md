@@ -1,16 +1,12 @@
-# 🦖 PediaSaurio - Wikipedia de ARK: Survival Evolved
+# 🦖 PediaSaurus - Wiki de ARK: Survival Evolved
 
-## 📖 Descripción
+Proyecto Final del curso **Desarrollo Web**.
 
-PediaSaurio es un sitio web desarrollado como proyecto final para el curso de Desarrollo Web.
-
-El objetivo del proyecto es ofrecer una página inspirada en una Wikipedia sobre el videojuego **ARK: Survival Evolved**, donde los usuarios pueden consultar información sobre dinosaurios, mapas del juego, participar en un foro, registrarse y recorrer una tienda temática.
-
-El sitio fue desarrollado utilizando HTML5, CSS3, JavaScript y Bootstrap, aplicando buenas prácticas de maquetación, accesibilidad, SEO y diseño responsive.
+PediaSaurus es un sitio web estático inspirado en el videojuego **ARK: Survival Evolved**, desarrollado utilizando HTML5, SASS, CSS3 y JavaScript. El objetivo del proyecto es brindar información sobre dinosaurios, mapas y contenido relacionado con el juego mediante una interfaz moderna, responsive e intuitiva.
 
 ---
 
-## 🌐 Sitio publicado
+# 🌐 Sitio publicado
 
 GitHub Pages:
 
@@ -22,36 +18,96 @@ https://github.com/josuecalistro/Proyecto-Pediasaurus
 
 ---
 
-# 🚀 Tecnologías utilizadas
+# 📄 Secciones del sitio
+
+El proyecto está compuesto por seis páginas principales:
+
+- 🏠 Inicio
+- 🦖 Dinosaurios
+- 🗺️ Mapas
+- 🛒 Tienda
+- 💬 Foro
+- 👤 Registro
+
+Cada página posee contenido propio y una navegación común para facilitar el recorrido del usuario.
+
+---
+
+# 🛠 Tecnologías utilizadas
 
 - HTML5
+- SASS (SCSS)
 - CSS3
 - JavaScript
 - Bootstrap 5
 - AOS (Animate On Scroll)
+- Flexbox
+- CSS Grid
 - Git
 - GitHub
 - GitHub Pages
 
 ---
 
-# 📂 Estructura del proyecto
+# 🎨 Características implementadas
+
+- Diseño responsive para computadoras, tablets y dispositivos móviles.
+- Navegación entre todas las páginas.
+- Diseño personalizado inspirado en ARK.
+- Tarjetas interactivas para dinosaurios.
+- Tarjetas 3D con efecto Flip para los mapas.
+- Tienda con carrito de compras mediante JavaScript.
+- Foro con publicaciones simuladas.
+- Formulario de registro.
+- Animaciones utilizando AOS.
+- Transiciones y transformaciones CSS.
+- Uso de imágenes optimizadas en formato WebP.
+- Organización semántica del contenido.
+
+---
+
+# ⚙️ Implementación de SASS
+
+Toda la hoja de estilos fue desarrollada utilizando **SASS (SCSS)**.
+
+Se implementaron las siguientes características:
+
+- Variables
+- Partials
+- Mixins
+- Extend
+- Nesting
+- Archivo principal `styles.scss`
+- Compilación automática hacia `Css/styles.css`
+
+Estructura utilizada:
+
+```
+scss/
+│
+├── _variables.scss
+├── _mixins.scss
+├── _extends.scss
+├── _estilos-originales.scss
+└── styles.scss
+```
+
+---
+
+# 📁 Estructura del proyecto
 
 ```
 Proyecto-Pediasaurus
 │
-├── Css
-│   └── styles.css
+├── Css/
+│   ├── styles.css
+│   └── styles.css.map
 │
-├── img
-│   ├── dinos
-│   ├── mapas
-│   ├── productos
-│   └── ...
+├── img/
 │
-├── js
-│   ├── index.js
-│   └── tienda.js
+├── js/
+│
+├── scss/
 │
 ├── index.html
 ├── dinos.html
@@ -65,224 +121,105 @@ Proyecto-Pediasaurus
 
 ---
 
-# 📄 Páginas desarrolladas
-
-## 🏠 Inicio
-
-La página principal presenta el sitio mediante un hero principal y tres carruseles interactivos.
-
-Incluye:
-
-- Presentación del proyecto
-- Carrusel de dinosaurios
-- Carrusel de mapas
-- Carrusel de productos destacados
-- Navegación hacia todas las páginas
-
----
-
-## 🦖 Dinosaurios
-
-Contiene una galería de criaturas de ARK.
-
-Cada tarjeta muestra:
-
-- Imagen
-- Nombre
-- Tipo
-- Descripción
-- Utilidad
-
----
-
-## 🗺️ Mapas
-
-Presenta los mapas oficiales del juego mediante tarjetas con efecto 3D.
-
-Cada mapa incluye:
-
-- Imagen
-- Nombre
-- Breve descripción
-- Efecto Flip al pasar el mouse
-
----
-
-## 🛒 Tienda
-
-Simula una tienda de productos relacionados con ARK.
-
-Funciones implementadas:
-
-- Agregar productos al carrito.
-- Calcular cantidad de productos.
-- Calcular precio total.
-- Vaciar carrito.
-- Finalizar compra.
-- Alerta Bootstrap al finalizar una compra.
-- Alerta Bootstrap al vaciar el carrito.
-
----
-
-## 💬 Foro
-
-Página de ejemplo donde se muestran publicaciones simuladas de usuarios de la comunidad.
-
-Su objetivo es representar una futura sección social del sitio.
-
----
-
-## 👤 Registro
-
-Formulario para registrar un usuario.
-
-Incluye:
-
-- Nombre
-- Email
-- Validaciones HTML5
-- Componentes Bootstrap
-- Alerta Bootstrap de bienvenida al registrarse correctamente.
-
----
-
-# 🎨 Diseño
-
-El diseño busca representar la estética del videojuego ARK.
-
-Se utilizaron:
-
-- Paleta de colores oscuros.
-- Detalles verdes inspirados en la interfaz del juego.
-- Tarjetas con sombras.
-- Animaciones suaves.
-- Diseño responsive.
-- Componentes Bootstrap.
-
----
-
-# ✨ Funcionalidades implementadas
-
-✔ Navegación entre páginas.
-
-✔ Carruseles desarrollados con JavaScript.
-
-✔ Tarjetas con efectos Hover.
-
-✔ Tarjetas 3D para mapas.
-
-✔ Carrito de compras funcional.
-
-✔ Vaciado del carrito.
-
-✔ Cálculo automático del total.
-
-✔ Alertas Bootstrap.
-
-✔ Registro de usuarios.
-
-✔ Animaciones mediante AOS.
-
-✔ Diseño responsive.
-
----
-
 # 📱 Responsive Design
 
-El sitio fue desarrollado para adaptarse correctamente a:
+El proyecto fue desarrollado siguiendo un enfoque responsive mediante Media Queries.
+
+Se adaptan correctamente:
 
 - Computadoras
 - Tablets
-- Teléfonos móviles
+- Celulares
 
-Utilizando:
+También se utilizaron:
 
 - Flexbox
-- Grid
-- Media Queries
-- Bootstrap
+- CSS Grid
+- Imágenes responsivas
+- Diseño adaptable
 
 ---
 
-# ♿ Accesibilidad
+# 🚀 SEO y Accesibilidad
 
-Se implementaron distintas buenas prácticas:
+Se aplicaron diversas buenas prácticas:
 
-- Etiquetas semánticas.
-- Uso correcto de encabezados.
-- Formularios con labels.
-- Texto alternativo (alt) en imágenes.
-- Navegación clara.
-- Contraste de colores.
-
----
-
-# 🔍 SEO
-
-Se aplicaron prácticas básicas de SEO On Page:
-
-- Títulos únicos por página.
-- Meta Description.
-- Uso de etiquetas semánticas.
-- Imágenes con atributo alt.
-- Estructura correcta de encabezados.
-- Optimización de contenido.
+- HTML semántico
+- Meta Description
+- Meta Viewport
+- Etiqueta Title personalizada
+- Idioma del documento (`lang="es"`)
+- Imágenes con atributo `alt`
+- Navegación accesible
+- Optimización de imágenes
+- Organización jerárquica mediante encabezados
 
 ---
 
-# 📚 Librerías utilizadas
+# ✨ Animaciones
 
-## Bootstrap 5
+El sitio incorpora diferentes efectos visuales:
 
-Se utilizó para:
-
-- Botones
-- Formularios
-- Alertas
-- Contenedores
-- Utilidades responsive
-
----
-
-## AOS
-
-Animate On Scroll.
-
-Permite agregar animaciones cuando los elementos aparecen durante el desplazamiento de la página.
+- Hover
+- Transiciones CSS
+- Transformaciones
+- Escalado de imágenes
+- Tarjetas con efecto Flip 3D
+- Animaciones mediante AOS
 
 ---
 
-# 🧠 Lo aprendido durante el proyecto
+# 🛒 Funcionalidades con JavaScript
 
-Durante el desarrollo se aplicaron conocimientos sobre:
+- Carrito de compras.
+- Agregar y eliminar productos.
+- Vaciar carrito.
+- Alertas visuales.
+- Mostrar más dinosaurios.
+- Inicialización de animaciones AOS.
 
-- HTML semántico.
-- CSS avanzado.
-- Flexbox.
-- CSS Grid.
-- Responsive Design.
-- Bootstrap.
-- JavaScript.
-- Manipulación del DOM.
-- Eventos.
-- Git.
-- GitHub.
-- GitHub Pages.
-- SEO.
-- Accesibilidad.
+---
+
+# 📦 Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/josuecalistro/Proyecto-Pediasaurus.git
+```
+
+Ingresar al proyecto:
+
+```bash
+cd Proyecto-Pediasaurus
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Compilar SASS:
+
+```bash
+npm run sass
+```
+
+O generar la versión final:
+
+```bash
+npm run sass:build
+```
 
 ---
 
 # 👨‍💻 Autor
 
-**Josué Calistro**
-
-Proyecto realizado para la entrega final del curso **Desarrollo Web**.
+Proyecto desarrollado por **Josué Calistro** como entrega final del curso de **Desarrollo Web**.
 
 ---
 
-# 📌 Estado del proyecto
+# 📜 Licencia
 
-✅ Proyecto finalizado.
-
-Actualmente incluye todas las funcionalidades requeridas para la entrega académica y se encuentra publicado mediante GitHub Pages.
+Proyecto realizado con fines educativos.
