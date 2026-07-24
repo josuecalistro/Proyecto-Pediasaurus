@@ -370,3 +370,4 @@ botonFinalizar.addEventListener("click", () => {
     }, 3000);
 
 });
+AOS.init();
