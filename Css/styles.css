@@ -1495,6 +1495,16 @@ flex-direction:column;
     z-index: 9999;
     text-align: center;
 }
+#alerta-registro{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    z-index: 9999;
+}
 
 /* ================================= */
 /* RESPONSIVE */

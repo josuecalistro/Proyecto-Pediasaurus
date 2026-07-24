@@ -42,8 +42,16 @@ rel="stylesheet">
 
 <main>
     <div class="container py-5">
+        <div
+    id="alerta-registro"
+    class="alert alert-success fade d-none"
+    role="alert"
+>
+    <strong>¡Bienvenido a PediaSaurio!</strong>
+    Tu usuario se registró correctamente.
+</div>
 
-    <form class="registro-form mx-auto">
+    <form id="form-registro" class="registro-form mx-auto">
 
         <div class="mb-3">
 
@@ -100,6 +108,38 @@ src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
 </script>
 
 <script>
+
+AOS.init();
+
+const formulario = document.getElementById("form-registro");
+
+formulario.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const alerta = document.getElementById("alerta-registro");
+
+    alerta.classList.remove("d-none");
+
+    setTimeout(() => {
+        alerta.classList.add("show");
+    }, 10);
+
+    formulario.reset();
+
+    setTimeout(() => {
+
+        alerta.classList.remove("show");
+
+        setTimeout(() => {
+            alerta.classList.add("d-none");
+        }, 150);
+
+    }, 3000);
+
+});
+
+</script>
 
 AOS.init();
 
