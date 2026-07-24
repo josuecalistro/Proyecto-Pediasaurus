@@ -1,0 +1,65 @@
+// Colores principales
+
+$color-principal: #315c28;
+$color-principal-claro: #4f813c;
+$color-secundario: #9aca3c;
+$color-secundario-claro: #b5e45c;
+
+$color-fondo: #101610;
+$color-fondo-secundario: #182018;
+$color-card: #202920;
+$color-card-claro: #2a352a;
+
+$color-texto: #f4f4f4;
+$color-texto-secundario: #c7cec7;
+$color-negro: #111111;
+$color-blanco: #ffffff;
+
+$color-error: #d9534f;
+$color-correcto: #4caf50;
+$color-advertencia: #f0ad4e;
+
+
+// Tipografías
+
+$fuente-principal: Arial, Helvetica, sans-serif;
+$fuente-titulos: Georgia, "Times New Roman", serif;
+
+
+// Tamaños
+
+$ancho-maximo: 1200px;
+
+$espaciado-xs: 5px;
+$espaciado-sm: 10px;
+$espaciado-md: 20px;
+$espaciado-lg: 35px;
+$espaciado-xl: 60px;
+
+
+// Bordes
+
+$radio-pequeno: 6px;
+$radio-medio: 12px;
+$radio-grande: 20px;
+
+
+// Sombras
+
+$sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.25);
+$sombra-media: 0 8px 22px rgba(0, 0, 0, 0.35);
+$sombra-fuerte: 0 12px 30px rgba(0, 0, 0, 0.5);
+
+
+// Transiciones
+
+$transicion-rapida: 0.2s ease;
+$transicion-normal: 0.3s ease;
+$transicion-lenta: 0.6s ease;
+
+
+// Breakpoints
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

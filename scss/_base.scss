@@ -1,14 +1,16 @@
-@use "variables" as *;
-@use "mixins" as *;
-@use "extends" as *;
-
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./extends";
 
 body {
-    font-family: $fuente-principal;
+    font-family: v.$fuente-principal;
     background:
-        linear-gradient(rgba(10, 16, 10, 0.88), rgba(10, 16, 10, 0.92)),
+        linear-gradient(
+            rgba(10, 16, 10, 0.88),
+            rgba(10, 16, 10, 0.92)
+        ),
         url("../img/fondo-ark.webp") center / cover fixed;
-    color: $color-texto;
+    color: v.$color-texto;
     line-height: 1.6;
 }
 
@@ -18,7 +20,7 @@ main {
 }
 
 section {
-    padding: $espaciado-xl 0;
+    padding: v.$espaciado-xl 0;
 }
 
 h1,
@@ -30,7 +32,7 @@ h4 {
 
 h1,
 h2 {
-    font-family: $fuente-titulos;
+    font-family: v.$fuente-titulos;
 }
 
 h2 {
@@ -38,7 +40,7 @@ h2 {
 }
 
 p {
-    color: $color-texto-secundario;
+    color: v.$color-texto-secundario;
 }
 
 a {
@@ -46,14 +48,14 @@ a {
 }
 
 .contenedor {
-    @include contenedor;
+    @include m.contenedor;
 }
 
 .seccion-dinosaurios {
-    @include contenedor;
+    @include m.contenedor;
 
     > h2 {
-        margin-bottom: $espaciado-lg;
+        margin-bottom: v.$espaciado-lg;
     }
 }
 
@@ -63,9 +65,9 @@ a {
     left: 15px;
     z-index: 9999;
     padding: 10px 16px;
-    border-radius: $radio-pequeno;
-    background-color: $color-secundario;
-    color: $color-negro;
+    border-radius: v.$radio-pequeno;
+    background-color: v.$color-secundario;
+    color: v.$color-negro;
     font-weight: bold;
 
     &:focus {
@@ -74,6 +76,6 @@ a {
 }
 
 ::selection {
-    background-color: $color-secundario;
-    color: $color-negro;
+    background-color: v.$color-secundario;
+    color: v.$color-negro;
 }

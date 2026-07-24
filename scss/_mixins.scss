@@ -1,0 +1,102 @@
+@use "variables" as *;
+
+
+// Flexbox centrado
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Flexbox entre elementos
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// Grid responsive
+
+@mixin grid-responsive($minimo: 280px, $separacion: 25px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($minimo, 1fr));
+    gap: $separacion;
+}
+
+
+// Contenedor principal
+
+@mixin contenedor {
+    width: min(90%, $ancho-maximo);
+    margin-inline: auto;
+}
+
+
+// Botón personalizado
+
+@mixin boton($fondo: $color-principal, $texto: $color-blanco) {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid transparent;
+    border-radius: $radio-medio;
+    background-color: $fondo;
+    color: $texto;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform $transicion-normal,
+        background-color $transicion-normal,
+        border-color $transicion-normal;
+
+    &:hover {
+        transform: translateY(-3px);
+        background-color: $color-principal-claro;
+        border-color: $color-secundario;
+    }
+
+    &:focus-visible {
+        outline: 3px solid $color-secundario;
+        outline-offset: 4px;
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+
+// Tarjeta
+
+@mixin tarjeta($fondo: $color-card) {
+    overflow: hidden;
+    border: 1px solid rgba($color-secundario, 0.25);
+    border-radius: $radio-medio;
+    background-color: $fondo;
+    box-shadow: $sombra-suave;
+}
+
+
+// Responsive
+
+@mixin mobile {
+    @media (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop-pequeno {
+    @media (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}

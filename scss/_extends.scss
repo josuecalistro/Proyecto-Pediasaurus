@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+
+// Base reutilizable para las tarjetas
+
+%card-base {
+    overflow: hidden;
+    border-radius: $radio-medio;
+    background-color: $color-card;
+    box-shadow: $sombra-suave;
+    transition:
+        transform $transicion-normal,
+        box-shadow $transicion-normal,
+        border-color $transicion-normal;
+}
+
+
+// Base para títulos de secciones
+
+%titulo-seccion {
+    margin-bottom: $espaciado-lg;
+    color: $color-secundario;
+    text-align: center;
+    font-family: $fuente-titulos;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+
+// Base para campos de formularios
+
+%campo-formulario {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid transparent;
+    border-radius: $radio-pequeno;
+    background-color: $color-fondo-secundario;
+    color: $color-texto;
+    font-family: $fuente-principal;
+    transition:
+        border-color $transicion-normal,
+        box-shadow $transicion-normal;
+}
+
+
+// Base para paneles
+
+%panel {
+    padding: $espaciado-md;
+    border-radius: $radio-medio;
+    background-color: rgba($color-card, 0.95);
+    box-shadow: $sombra-media;
+}

@@ -1,18 +1,924 @@
-/* Error: Undefined variable.
- *   ,
- * 7 |     font-family: $fuente-principal;
- *   |                  ^^^^^^^^^^^^^^^^^
- *   '
- *   scss\_base.scss 7:18  @use
- *   scss\styles.scss 6:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502      font-family: $fuente-principal;\d\a   \2502                   ^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\_base.scss 7:18  @use\a   scss\\styles.scss 6:1  root stylesheet";
+.producto-card, .dino-card {
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #202920;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+h2 {
+  margin-bottom: 35px;
+  color: #9aca3c;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.formulario .campo input,
+.formulario .campo textarea,
+.formulario .campo select,
+.formulario .form-group input,
+.formulario .form-group textarea,
+.formulario .form-group select,
+.form-registro .campo input,
+.form-registro .campo textarea,
+.form-registro .campo select,
+.form-registro .form-group input,
+.form-registro .form-group textarea,
+.form-registro .form-group select,
+.form-foro .campo input,
+.form-foro .campo textarea,
+.form-foro .campo select,
+.form-foro .form-group input,
+.form-foro .form-group textarea,
+.form-foro .form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: #182018;
+  color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publicacion,
+.comentario,
+.post-foro, .carrito,
+.carrito-contenedor, .formulario,
+.form-registro,
+.form-foro {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(32, 41, 32, 0.95);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(rgba(10, 16, 10, 0.88), rgba(10, 16, 10, 0.92)), url("../img/fondo-ark.webp") center/cover fixed;
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+main {
+  width: 100%;
+  min-height: 70vh;
+}
+
+section {
+  padding: 60px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+p {
+  color: #c7cec7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.seccion-dinosaurios {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+.seccion-dinosaurios > h2 {
+  margin-bottom: 35px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 15px;
+  z-index: 9999;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: #9aca3c;
+  color: #111111;
+  font-weight: bold;
+}
+.skip-link:focus {
+  top: 15px;
+}
+
+::selection {
+  background-color: #9aca3c;
+  color: #111111;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 2px solid rgba(154, 202, 60, 0.5);
+  background-color: rgba(16, 22, 16, 0.96);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+header h1 {
+  margin-bottom: 20px;
+  color: #9aca3c;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-shadow: 0 3px 12px rgba(154, 202, 60, 0.2);
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header nav ul li a {
+  display: block;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: #f4f4f4;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #111111;
+  background-color: #9aca3c;
+  transform: translateY(-2px);
+}
+header nav ul li a:focus-visible {
+  outline: 3px solid #9aca3c;
+  outline-offset: 3px;
+}
+
+.contenedor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.dino-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(154, 202, 60, 0.3);
+}
+.dino-card:hover {
+  transform: translateY(-8px);
+  border-color: #9aca3c;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.dino-card:hover .dino-card__imagen img {
+  transform: scale(1.07);
+}
+.dino-card__titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #315c28, #4f813c);
+}
+.dino-card__titulo h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+.dino-card__nivel {
+  font-size: 1.5rem;
+}
+.dino-card__imagen {
+  height: 220px;
+  overflow: hidden;
+  background-color: #111111;
+}
+.dino-card__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.dino-card__tipo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: rgba(154, 202, 60, 0.12);
+  color: #b5e45c;
+  font-weight: bold;
+}
+.dino-card__contenido {
+  flex-grow: 1;
+  padding: 20px;
+}
+.dino-card__contenido h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.dino-card__contenido p {
+  margin-bottom: 14px;
+}
+.dino-card__frase {
+  padding: 12px;
+  border-left: 4px solid #9aca3c;
+  background-color: rgba(17, 17, 17, 0.25);
+  font-style: italic;
+}
+.dino-card__pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(154, 202, 60, 0.25);
+  background-color: rgba(17, 17, 17, 0.2);
+  font-size: 0.9rem;
+}
+.dino-card__autor {
+  color: #c7cec7;
+}
+.dino-card__estadistica {
+  color: #9aca3c;
+  font-weight: bold;
+}
+.dino-card--carnivoro {
+  border-top: 5px solid #a63c3c;
+}
+.dino-card--herbivoro {
+  border-top: 5px solid #62a83e;
+}
+.dino-card--volador {
+  border-top: 5px solid #4c9fbd;
+}
+.dino-card--piscivoro {
+  border-top: 5px solid #387ea8;
+}
+.dino-card--omnivoro {
+  border-top: 5px solid #bd873d;
+}
+.dino-card--insecto, .dino-card--insectivoro {
+  border-top: 5px solid #897140;
+}
+.dino-card--boss {
+  border-top: 5px solid #d2a82c;
+}
+.dino-card--boss .dino-card__titulo {
+  background: linear-gradient(135deg, #6f4214, #bf8b20);
+}
+.dino-card--titan {
+  border-top: 5px solid #677f92;
+}
+.dino-card--titan .dino-card__titulo {
+  background: linear-gradient(135deg, #344550, #687d87);
+}
+.dino-card--guardian {
+  border-top: 5px solid #8c5ac7;
+}
+.dino-card--guardian .dino-card__titulo {
+  background: linear-gradient(135deg, #42305b, #7650a4);
+}
+
+.seccion-bosses,
+.seccion-titanes,
+.seccion-guardianes {
+  border-top: 1px solid rgba(154, 202, 60, 0.2);
+}
+
+.boton,
+.btn-personalizado,
+.boton-ver-mas {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: #315c28;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.boton:hover,
+.btn-personalizado:hover,
+.boton-ver-mas:hover {
+  transform: translateY(-3px);
+  background-color: #4f813c;
+  border-color: #9aca3c;
+}
+.boton:focus-visible,
+.btn-personalizado:focus-visible,
+.boton-ver-mas:focus-visible {
+  outline: 3px solid #9aca3c;
+  outline-offset: 4px;
+}
+.boton:active,
+.btn-personalizado:active,
+.boton-ver-mas:active {
+  transform: translateY(0);
+}
+
+.ver-mas-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.boton-ver-mas {
+  min-width: 200px;
+  border-color: #9aca3c;
+  background-color: #315c28;
+}
+.boton-ver-mas:hover {
+  background-color: #9aca3c;
+  color: #111111;
+}
+.boton-ver-mas--oculto {
+  display: none;
+}
+
+.btn-secundario {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #9aca3c;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-secundario:hover {
+  transform: translateY(-3px);
+  background-color: #4f813c;
+  border-color: #9aca3c;
+}
+.btn-secundario:focus-visible {
+  outline: 3px solid #9aca3c;
+  outline-offset: 4px;
+}
+.btn-secundario:active {
+  transform: translateY(0);
+}
+.btn-secundario {
+  border-color: #9aca3c;
+}
+.btn-secundario:hover {
+  color: #111111;
+  background-color: #9aca3c;
+}
+
+.btn-eliminar {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: #d9534f;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-eliminar:hover {
+  transform: translateY(-3px);
+  background-color: #4f813c;
+  border-color: #9aca3c;
+}
+.btn-eliminar:focus-visible {
+  outline: 3px solid #9aca3c;
+  outline-offset: 4px;
+}
+.btn-eliminar:active {
+  transform: translateY(0);
+}
+.btn-eliminar {
+  padding: 8px 14px;
+}
+
+.formulario,
+.form-registro,
+.form-foro {
+  width: min(90%, 650px);
+  margin: 35px auto;
+}
+.formulario h2,
+.formulario h3,
+.form-registro h2,
+.form-registro h3,
+.form-foro h2,
+.form-foro h3 {
+  margin-bottom: 20px;
+  color: #9aca3c;
+  text-align: center;
+}
+.formulario .campo,
+.formulario .form-group,
+.form-registro .campo,
+.form-registro .form-group,
+.form-foro .campo,
+.form-foro .form-group {
+  margin-bottom: 20px;
+}
+.formulario .campo label,
+.formulario .form-group label,
+.form-registro .campo label,
+.form-registro .form-group label,
+.form-foro .campo label,
+.form-foro .form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #f4f4f4;
+  font-weight: bold;
+}
+.formulario .campo input::placeholder,
+.formulario .campo textarea::placeholder,
+.formulario .campo select::placeholder,
+.formulario .form-group input::placeholder,
+.formulario .form-group textarea::placeholder,
+.formulario .form-group select::placeholder,
+.form-registro .campo input::placeholder,
+.form-registro .campo textarea::placeholder,
+.form-registro .campo select::placeholder,
+.form-registro .form-group input::placeholder,
+.form-registro .form-group textarea::placeholder,
+.form-registro .form-group select::placeholder,
+.form-foro .campo input::placeholder,
+.form-foro .campo textarea::placeholder,
+.form-foro .campo select::placeholder,
+.form-foro .form-group input::placeholder,
+.form-foro .form-group textarea::placeholder,
+.form-foro .form-group select::placeholder {
+  color: #8e998e;
+}
+.formulario .campo input:focus,
+.formulario .campo textarea:focus,
+.formulario .campo select:focus,
+.formulario .form-group input:focus,
+.formulario .form-group textarea:focus,
+.formulario .form-group select:focus,
+.form-registro .campo input:focus,
+.form-registro .campo textarea:focus,
+.form-registro .campo select:focus,
+.form-registro .form-group input:focus,
+.form-registro .form-group textarea:focus,
+.form-registro .form-group select:focus,
+.form-foro .campo input:focus,
+.form-foro .campo textarea:focus,
+.form-foro .campo select:focus,
+.form-foro .form-group input:focus,
+.form-foro .form-group textarea:focus,
+.form-foro .form-group select:focus {
+  border-color: #9aca3c;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(154, 202, 60, 0.15);
+}
+.formulario .campo input:valid:not(:placeholder-shown),
+.formulario .campo textarea:valid:not(:placeholder-shown),
+.formulario .campo select:valid:not(:placeholder-shown),
+.formulario .form-group input:valid:not(:placeholder-shown),
+.formulario .form-group textarea:valid:not(:placeholder-shown),
+.formulario .form-group select:valid:not(:placeholder-shown),
+.form-registro .campo input:valid:not(:placeholder-shown),
+.form-registro .campo textarea:valid:not(:placeholder-shown),
+.form-registro .campo select:valid:not(:placeholder-shown),
+.form-registro .form-group input:valid:not(:placeholder-shown),
+.form-registro .form-group textarea:valid:not(:placeholder-shown),
+.form-registro .form-group select:valid:not(:placeholder-shown),
+.form-foro .campo input:valid:not(:placeholder-shown),
+.form-foro .campo textarea:valid:not(:placeholder-shown),
+.form-foro .campo select:valid:not(:placeholder-shown),
+.form-foro .form-group input:valid:not(:placeholder-shown),
+.form-foro .form-group textarea:valid:not(:placeholder-shown),
+.form-foro .form-group select:valid:not(:placeholder-shown) {
+  border-color: #4caf50;
+}
+.formulario .campo input:invalid:not(:placeholder-shown),
+.formulario .campo textarea:invalid:not(:placeholder-shown),
+.formulario .campo select:invalid:not(:placeholder-shown),
+.formulario .form-group input:invalid:not(:placeholder-shown),
+.formulario .form-group textarea:invalid:not(:placeholder-shown),
+.formulario .form-group select:invalid:not(:placeholder-shown),
+.form-registro .campo input:invalid:not(:placeholder-shown),
+.form-registro .campo textarea:invalid:not(:placeholder-shown),
+.form-registro .campo select:invalid:not(:placeholder-shown),
+.form-registro .form-group input:invalid:not(:placeholder-shown),
+.form-registro .form-group textarea:invalid:not(:placeholder-shown),
+.form-registro .form-group select:invalid:not(:placeholder-shown),
+.form-foro .campo input:invalid:not(:placeholder-shown),
+.form-foro .campo textarea:invalid:not(:placeholder-shown),
+.form-foro .campo select:invalid:not(:placeholder-shown),
+.form-foro .form-group input:invalid:not(:placeholder-shown),
+.form-foro .form-group textarea:invalid:not(:placeholder-shown),
+.form-foro .form-group select:invalid:not(:placeholder-shown) {
+  border-color: #d9534f;
+}
+.formulario .campo textarea,
+.formulario .form-group textarea,
+.form-registro .campo textarea,
+.form-registro .form-group textarea,
+.form-foro .campo textarea,
+.form-foro .form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+.formulario button,
+.form-registro button,
+.form-foro button {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: #315c28;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.formulario button:hover,
+.form-registro button:hover,
+.form-foro button:hover {
+  transform: translateY(-3px);
+  background-color: #4f813c;
+  border-color: #9aca3c;
+}
+.formulario button:focus-visible,
+.form-registro button:focus-visible,
+.form-foro button:focus-visible {
+  outline: 3px solid #9aca3c;
+  outline-offset: 4px;
+}
+.formulario button:active,
+.form-registro button:active,
+.form-foro button:active {
+  transform: translateY(0);
+}
+.formulario button,
+.form-registro button,
+.form-foro button {
+  width: 100%;
+}
+
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.form-check input {
+  width: auto;
+  margin-top: 5px;
+}
+.form-check label {
+  font-weight: normal;
+}
+
+.tienda-contenedor {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr);
+  gap: 35px;
+  align-items: start;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.producto-card {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.producto-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.producto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.producto-card h3 {
+  margin: 20px 0 10px;
+  padding-inline: 10px;
+  color: #9aca3c;
+}
+.producto-card p {
+  padding-inline: 20px;
+}
+.producto-card .precio {
+  display: block;
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.producto-card button {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: #315c28;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.producto-card button:hover {
+  transform: translateY(-3px);
+  background-color: #4f813c;
+  border-color: #9aca3c;
+}
+.producto-card button:focus-visible {
+  outline: 3px solid #9aca3c;
+  outline-offset: 4px;
+}
+.producto-card button:active {
+  transform: translateY(0);
+}
+.producto-card button {
+  margin-top: 10px;
+}
+
+.carrito,
+.carrito-contenedor {
+  position: sticky;
+  top: 20px;
+}
+.carrito h2,
+.carrito h3,
+.carrito-contenedor h2,
+.carrito-contenedor h3 {
+  margin-bottom: 20px;
+  color: #9aca3c;
+}
+.carrito .carrito-item,
+.carrito-contenedor .carrito-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(154, 202, 60, 0.2);
+}
+.carrito .carrito-total,
+.carrito-contenedor .carrito-total {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.foro-contenedor {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.publicaciones,
+.comentarios {
+  display: grid;
+  gap: 20px;
+}
+
+.publicacion,
+.comentario,
+.post-foro {
+  border-left: 5px solid #9aca3c;
+}
+.publicacion__encabezado,
+.comentario__encabezado,
+.post-foro__encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.publicacion__usuario,
+.comentario__usuario,
+.post-foro__usuario {
+  color: #9aca3c;
+  font-weight: bold;
+}
+.publicacion__fecha,
+.comentario__fecha,
+.post-foro__fecha {
+  color: #c7cec7;
+  font-size: 0.85rem;
+}
+.publicacion__contenido,
+.comentario__contenido,
+.post-foro__contenido {
+  margin-bottom: 10px;
+}
+.publicacion__acciones,
+.comentario__acciones,
+.post-foro__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.publicacion__acciones button,
+.comentario__acciones button,
+.post-foro__acciones button {
+  padding: 7px 14px;
+  border: 1px solid #9aca3c;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #9aca3c;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.publicacion__acciones button:hover,
+.comentario__acciones button:hover,
+.post-foro__acciones button:hover {
+  background-color: #9aca3c;
+  color: #111111;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 35px 20px;
+  border-top: 2px solid rgba(154, 202, 60, 0.4);
+  background-color: rgba(16, 22, 16, 0.97);
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  color: #c7cec7;
+}
+footer a {
+  color: #9aca3c;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes brillo {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(154, 202, 60, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(154, 202, 60, 0.65);
+  }
+}
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animacion-aparecer {
+  animation: aparecer 0.8s ease both;
+}
+
+.animacion-brillo {
+  animation: brillo 2.5s ease-in-out infinite;
+}
+
+.animacion-flotar {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@media (max-width: 1024px) {
+  .tienda-contenedor {
+    grid-template-columns: 1fr;
+  }
+  .carrito,
+  .carrito-contenedor {
+    position: static;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 45px 0;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+  header nav ul li a {
+    width: 100%;
+    text-align: center;
+  }
+  .contenedor-cards,
+  .productos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dino-card__imagen {
+    height: 200px;
+  }
+}
+@media (max-width: 576px) {
+  .contenedor-cards,
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  header {
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .dino-card__titulo, .dino-card__tipo, .dino-card__pie {
+    gap: 8px;
+  }
+  .dino-card__imagen {
+    height: 210px;
+  }
+  .formulario,
+  .form-registro,
+  .form-foro {
+    width: 94%;
+    padding: 16px;
+  }
+  .boton,
+  .btn-personalizado,
+  .boton-ver-mas {
+    width: 100%;
+    text-align: center;
+  }
+  .ver-mas-contenedor {
+    width: 100%;
+  }
+  footer {
+    padding: 25px 15px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
