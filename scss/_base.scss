@@ -1,0 +1,79 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "extends" as *;
+
+
+body {
+    font-family: $fuente-principal;
+    background:
+        linear-gradient(rgba(10, 16, 10, 0.88), rgba(10, 16, 10, 0.92)),
+        url("../img/fondo-ark.webp") center / cover fixed;
+    color: $color-texto;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+    min-height: 70vh;
+}
+
+section {
+    padding: $espaciado-xl 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+h1,
+h2 {
+    font-family: $fuente-titulos;
+}
+
+h2 {
+    @extend %titulo-seccion;
+}
+
+p {
+    color: $color-texto-secundario;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    @include contenedor;
+}
+
+.seccion-dinosaurios {
+    @include contenedor;
+
+    > h2 {
+        margin-bottom: $espaciado-lg;
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 9999;
+    padding: 10px 16px;
+    border-radius: $radio-pequeno;
+    background-color: $color-secundario;
+    color: $color-negro;
+    font-weight: bold;
+
+    &:focus {
+        top: 15px;
+    }
+}
+
+::selection {
+    background-color: $color-secundario;
+    color: $color-negro;
+}

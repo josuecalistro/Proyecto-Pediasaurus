@@ -1,0 +1,161 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "extends" as *;
+
+
+.contenedor-cards {
+    @include grid-responsive(280px, 28px);
+}
+
+.dino-card {
+    @extend %card-base;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba($color-secundario, 0.3);
+
+    &:hover {
+        transform: translateY(-8px);
+        border-color: $color-secundario;
+        box-shadow: $sombra-fuerte;
+
+        .dino-card__imagen img {
+            transform: scale(1.07);
+        }
+    }
+
+    &__titulo {
+        @include flex-between;
+        padding: 15px $espaciado-md;
+        background: linear-gradient(
+            135deg,
+            $color-principal,
+            $color-principal-claro
+        );
+
+        h3 {
+            margin: 0;
+            color: $color-blanco;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__nivel {
+        font-size: 1.5rem;
+    }
+
+    &__imagen {
+        height: 220px;
+        overflow: hidden;
+        background-color: $color-negro;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform $transicion-lenta;
+        }
+    }
+
+    &__tipo {
+        @include flex-between;
+        gap: $espaciado-sm;
+        padding: 10px $espaciado-md;
+        background-color: rgba($color-secundario, 0.12);
+        color: $color-secundario-claro;
+        font-weight: bold;
+    }
+
+    &__contenido {
+        flex-grow: 1;
+        padding: $espaciado-md;
+
+        h4 {
+            margin-bottom: $espaciado-sm;
+            color: $color-blanco;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+    }
+
+    &__frase {
+        padding: 12px;
+        border-left: 4px solid $color-secundario;
+        background-color: rgba($color-negro, 0.25);
+        font-style: italic;
+    }
+
+    &__pie {
+        @include flex-between;
+        gap: $espaciado-sm;
+        padding: 12px $espaciado-md;
+        border-top: 1px solid rgba($color-secundario, 0.25);
+        background-color: rgba($color-negro, 0.2);
+        font-size: 0.9rem;
+    }
+
+    &__autor {
+        color: $color-texto-secundario;
+    }
+
+    &__estadistica {
+        color: $color-secundario;
+        font-weight: bold;
+    }
+
+    &--carnivoro {
+        border-top: 5px solid #a63c3c;
+    }
+
+    &--herbivoro {
+        border-top: 5px solid #62a83e;
+    }
+
+    &--volador {
+        border-top: 5px solid #4c9fbd;
+    }
+
+    &--piscivoro {
+        border-top: 5px solid #387ea8;
+    }
+
+    &--omnivoro {
+        border-top: 5px solid #bd873d;
+    }
+
+    &--insecto,
+    &--insectivoro {
+        border-top: 5px solid #897140;
+    }
+
+    &--boss {
+        border-top: 5px solid #d2a82c;
+
+        .dino-card__titulo {
+            background: linear-gradient(135deg, #6f4214, #bf8b20);
+        }
+    }
+
+    &--titan {
+        border-top: 5px solid #677f92;
+
+        .dino-card__titulo {
+            background: linear-gradient(135deg, #344550, #687d87);
+        }
+    }
+
+    &--guardian {
+        border-top: 5px solid #8c5ac7;
+
+        .dino-card__titulo {
+            background: linear-gradient(135deg, #42305b, #7650a4);
+        }
+    }
+}
+
+.seccion-bosses,
+.seccion-titanes,
+.seccion-guardianes {
+    border-top: 1px solid rgba($color-secundario, 0.2);
+}

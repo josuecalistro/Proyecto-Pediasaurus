@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes brillo {
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba($color-secundario, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 22px rgba($color-secundario, 0.65);
+    }
+}
+
+@keyframes flotar {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.animacion-aparecer {
+    animation: aparecer 0.8s ease both;
+}
+
+.animacion-brillo {
+    animation: brillo 2.5s ease-in-out infinite;
+}
+
+.animacion-flotar {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,100 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+@include desktop-pequeno {
+    .tienda-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .carrito,
+    .carrito-contenedor {
+        position: static;
+    }
+}
+
+
+@include tablet {
+    section {
+        padding: 45px 0;
+    }
+
+    header {
+        nav {
+            ul {
+                flex-direction: column;
+                align-items: stretch;
+
+                li {
+                    width: 100%;
+
+                    a {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .contenedor-cards,
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dino-card {
+        &__imagen {
+            height: 200px;
+        }
+    }
+}
+
+
+@include mobile {
+    .contenedor-cards,
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .dino-card {
+        &__titulo,
+        &__tipo,
+        &__pie {
+            gap: 8px;
+        }
+
+        &__imagen {
+            height: 210px;
+        }
+    }
+
+    .formulario,
+    .form-registro,
+    .form-foro {
+        width: 94%;
+        padding: 16px;
+    }
+
+    .boton,
+    .btn-personalizado,
+    .boton-ver-mas {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ver-mas-contenedor {
+        width: 100%;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+}

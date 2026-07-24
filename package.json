@@ -1,0 +1,12 @@
+{
+    "name": "proyecto-pediasaurus",
+    "version": "1.0.0",
+    "description": "Wikipedia de criaturas y contenido de ARK Survival Evolved",
+    "scripts": {
+        "sass": "sass --watch scss/styles.scss:Css/styles.css",
+        "sass:build": "sass scss/styles.scss:Css/styles.css --style=compressed --no-source-map"
+    },
+    "devDependencies": {
+        "sass": "^1.89.0"
+    }
+}

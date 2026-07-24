@@ -1,0 +1,81 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "extends" as *;
+
+
+.formulario,
+.form-registro,
+.form-foro {
+    @extend %panel;
+    width: min(90%, 650px);
+    margin: $espaciado-lg auto;
+
+    h2,
+    h3 {
+        margin-bottom: $espaciado-md;
+        color: $color-secundario;
+        text-align: center;
+    }
+
+    .campo,
+    .form-group {
+        margin-bottom: $espaciado-md;
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: $color-texto;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            @extend %campo-formulario;
+
+            &::placeholder {
+                color: #8e998e;
+            }
+
+            &:focus {
+                border-color: $color-secundario;
+                outline: none;
+                box-shadow: 0 0 0 4px rgba($color-secundario, 0.15);
+            }
+
+            &:valid:not(:placeholder-shown) {
+                border-color: $color-correcto;
+            }
+
+            &:invalid:not(:placeholder-shown) {
+                border-color: $color-error;
+            }
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+    }
+
+    button {
+        @include boton;
+        width: 100%;
+    }
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: $espaciado-sm;
+    margin-bottom: $espaciado-md;
+
+    input {
+        width: auto;
+        margin-top: 5px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+}
